@@ -10,7 +10,10 @@ import sys
 class Form1:
     def __init__(self, root):
         self.root = root
-        root.title("SeleznevCRC16")
+        root.title("CRC16")
+        
+        self.lbl_polynomial = tk.Label(root, text="Polynomial")
+        self.lbl_polynomial.grid(row=0, column=2, padx=5, pady=5)
 
         self.txt_polynomial = tk.Entry(root)
         self.txt_polynomial.insert(0, "0x8005")  # CRC-16-IBM
